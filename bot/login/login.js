@@ -1,5 +1,5 @@
 // set bash title
-process.stdout.write("\x1b]2;Goat Bot V2 - Made by NTKhang\x1b\x5c");
+process.stdout.write("\x1b]2; MELISSA BOT V3 - Made by Badhon\x1b\x5c");
 const defaultRequire = require;
 
 function decode(text) {
@@ -80,7 +80,7 @@ const titles = [
 		"G O A T B O T  V 2 @" + currentVersion
 	],
 	[
-		"GOATBOT V2"
+		"MELISSA-BOT-V3"
 	]
 ];
 const maxWidth = process.stdout.columns;
@@ -112,7 +112,7 @@ if (subTitle.length > maxWidth) {
 else {
 	subTitleArray.push(subTitle);
 }
-const author = ("Created by NTKhang with ♡");
+const author = ("Created by Badhon with ♡");
 const srcUrl = ("Source code: https://github.com/ntkhang03/Goat-Bot-V2");
 const fakeRelease = ("ALL VERSIONS NOT RELEASED HERE ARE FAKE");
 for (const t of subTitleArray) {
