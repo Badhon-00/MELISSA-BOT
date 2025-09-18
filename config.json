@@ -9,46 +9,59 @@
 		"intervalGetNewCookie": 1440,
 		"notes": "time the system automatically retrieves new cookies from email/password, unit is minute, if you set null, the system will not automatically retrieve new cookies, it saves you from having to manually change your cookie every time it expires. recommended set to 1440 (1day) or 4320 (3day).TO BE ABLE TO USE THIS FEATURE YOU NEED TO ENTER THE ACCOUNT PASSWORD ABOVE"
 	},
-	"antiInbox": false,
+	"antiInbox": true,
 	"language": "en",
 	"notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
-	"nickNameBot": "GoatBot",
-	"prefix": "-",
-	"api":"https://noobs-api.rf.gd/dipto",
+	"nickNameBot": "[ ^ ]-`ღ´🦋𝗠𝗲𝗹𝗶𝘀𝘀𝗮🍒🥂",
+	"prefix": "^",
 	"adminOnly": {
 		"enable": false,
 		"ignoreCommand": []
 	},
-	"adminBot": [],
+	"adminBot": [
+		"61557409693409",
+                "61569514522983",
+
+		"61571421696077"
+	],
+	"nisanBot": [
+		"61568301181050"
+	],
+	"notes": "YOUR GROUP ID or Tid ID SET NOW , BECAUSE BOT LOGS MESSAGE SENT YOUR GROUP",
 	"whiteListMode": {
 		"enable": false,
-		"whiteListIds": [],
+		"whiteListIds": [
+			""
+		],
 		"notes": "if you enable this feature, only the ids in the whiteListIds list can use the bot"
 	},
 	"whiteListModeThread": {
 		"enable": false,
-		"whiteListThreadIds": [],
+		"whiteListThreadIds": [
+			""
+		],
 		"notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
 		"how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
 	},
-	"database": {
-		"type": "sqlite",
-		"uriMongodb": "",
-		"autoSyncWhenStart": false,
-		"autoRefreshThreadInfoFirstTime": true,
-		"notes": "(1) type selects 'json' or 'sqlite' or 'mongodb'. If you choose mongodb, enter uri connect mongodb in the uriMongodb section, instructions to get uri connect mongodb at: https://youtu.be/z1f9urHW5xY. I recommend using 'mongodb' or 'sqlite', json is not recommended because it is not stable. (2) when you set autoSyncWhenStart to true, the bot will automatically synchronize the data in the database when starting the bot, this will make the bot start slower. (3) when you set autoRefreshThreadInfoFirstTime to true, the bot will automatically refresh the thread information when get first message from the thread since starting the bot"
-	},
-	"timeZone": "Asia/Dhaka",
-	"credentials": {
+  "database": {
+    "type": "mongodb",
+    "uriMongodb": "mongodb+srv://bossbayjid14:bayjid110@cluster0.vombiex.mongodb.net/melissa?retryWrites=true&w=majority&appName=Cluster0",
+    "autoSyncWhenStart": false,
+    "autoRefreshThreadInfoFirstTime": true,
+    "notes": "(1) type selects 'json' or 'sqlite' or 'mongodb'. If you choose mongodb, enter uri connect mongodb in the uriMongodb section, instructions to get uri connect mongodb at: https://youtu.be/z1f9urHW5xY. I recommend using 'mongodb' or 'sqlite', json is not recommended because it is not stable. (2) when you set autoSyncWhenStart to true, the bot will automatically synchronize the data in the database when starting the bot, this will make the bot start slower. (3) when you set autoRefreshThreadInfoFirstTime to true, the bot will automatically refresh the thread information when get first message from the thread since starting the bot"
+  },
+  "timeZone": "Asia/Dhaka",
+  "credentials": {
     "gmailAccount": {
-      "email": "fariasdipto@gmail.com",
-      "clientId": "356551796908-109qeba7nv0e30u2c7o22gr9podqsiim.apps.googleusercontent.com",
-      "clientSecret": "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",
-      "refreshToken": "1//04otrr7tUfUAFCgYIARAAGAQSNwF-L9IrnanDeaer7kPniPX_EdWPKNnf4_z7ONCUcR5Jp6_kcSXWKAND0inf-n1Yv1LRryIKNhY"
+      "email": "xassbayjid@gamil.com",
+      "clientId": "552344212361-ujv8mjve7ue0r20t5caem9a41o8il508.apps.googleusercontent.com",
+      "clientSecret": "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",
+      "refreshToken": "1//04KHgkn8_-_PfCgYIARAAGAQSNwF-L9Iro-cV9UkOYQjg6noVALzdmrnrL8rijCPS96WGrKoflqLkXr76iZiXezLunTbJAU1AxS4",
+      "apiKey": ""
     },
     "gRecaptcha": {
-      "siteKey": "",
-      "secretKey": ""
+      "siteKey": "6LcjUNYnAAAAACJRnuYb4PH2C1ZlesOimLIcziSd",
+      "secretKey": "6LcjUNYnAAAAAMWhPUFOdbhYbmeHtYoWzrH4YUDQ"
     }
 	},
 	"dashBoard": {
@@ -127,7 +140,7 @@
 		"message_reply": true,
 		"event": true,
 		"read_receipt": false,
-		"typ": false,
+		"typ": true,
 		"presence": false
 	},
 	"optionsFca": {
@@ -137,7 +150,7 @@
 		"listenTyping": true,
 		"logLevel": "error",
 		"selfListen": false,
-		"selfListenEvent": true,
+		"selfListenEvent": false,
 		"autoMarkDelivery": false,
 		"autoReconnect": false,
 		"notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
