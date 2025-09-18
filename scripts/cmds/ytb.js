@@ -13,7 +13,7 @@ module.exports = {
 		name: "ytb",
 		version: "1.1.4",
 		aliases: ['youtube'],
-		author: "dipto",
+		author: "BADHON",
 		countDown: 5,
 		role: 0,
 		description: {
@@ -156,4 +156,4 @@ async function diptoSt(url,pathName) {
 	catch (err) {
 		throw err;
 	}
-}
+			}
