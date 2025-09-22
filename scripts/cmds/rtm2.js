@@ -4,7 +4,7 @@ const os = require('os');
 module.exports = {
   config: {
     name: 'rtm2',
-    aliases: ['stats', 'status', 'system', 'rtm'],
+    aliases: ['stats2', 'status2', 'system2', 'r2'],
     version: '1.5',
     usePrefix: false,
     author: 'BADHON',

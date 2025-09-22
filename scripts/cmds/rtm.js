@@ -85,7 +85,7 @@ module.exports = {
       const botPing = Date.now() - startTime;
 
       const statsMessage = `
-✨🦋✨ ─《 MELISSA V3 STAT 》─ ✨🦋✨
+✨🦋✨ ─《 MELISSA STAT 》─ ✨🦋✨
 
 🏮 TIME INFO
 ───────────────────────────
