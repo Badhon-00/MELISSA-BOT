@@ -9,7 +9,7 @@ module.exports = {
     role: 2,
     shortDescription: "Kanda videos",
     longDescription: "get Kanda videos",
-    category: "𝟭𝟴+",
+    category: "18+",
     guide: "{pn}"
   },
 
