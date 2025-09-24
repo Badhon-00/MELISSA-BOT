@@ -2,7 +2,7 @@ const axios = require('axios');
 module.exports = {
 config: {
 	name: "edit",
-	author: "Tawsif~",
+	author: "ai",
 	category: "image",
 	countDown: 5,
 	role: 0,
