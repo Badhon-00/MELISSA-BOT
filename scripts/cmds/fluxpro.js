@@ -12,7 +12,7 @@ module.exports.config = {
   role: 2,
   author: "Dipto",
   description: "Generate images with Flux.1 Pro",
-  category: "𝗜𝗠𝗔𝗚𝗘 𝗚𝗘𝗡𝗘𝗥𝗔𝗧𝗢𝗥",
+  category: "ai",
   preimum: true,
   guide: "{pn} [prompt] --ratio 1024x1024\n{pn} [prompt]",
   countDown: 15,
@@ -21,15 +21,7 @@ module.exports.config = {
 module.exports.onStart = async ({ message, event, args, api }) => {
   try {
   const prompt = args.join(" ");
-  /*let prompt2, ratio;
-  if (prompt.includes("--ratio")) {
-    const parts = prompt.split("--ratio");
-    prompt2 = parts[0].trim();
-    ratio = parts[1].trim();
-  } else {
-    prompt2 = prompt;
-    ratio = "1024x1024";
-  }*/
+
     const startTime = new Date().getTime();
     const ok = message.reply('wait baby <😘')
     api.setMessageReaction("⌛", event.messageID, (err) => {}, true);
