@@ -14,11 +14,11 @@ module.exports.config = {
   description: "gemini ai with multiple conversation",
   usePrefix: true,
   guide: "[message]",
-  category: "Ai",
+  category: "ai",
   coolDowns: 5,
 };
 module.exports.onReply = async function ({ api, event, Reply }) {
-  //api.unsendMessage(Reply.messageID);
+  
   const { author } = Reply;
   if (author != event.senderID) return;
   const uid = event.senderID;
