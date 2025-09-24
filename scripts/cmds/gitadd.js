@@ -32,9 +32,9 @@ module.exports = {
  });
  }
 
- const githubToken = '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'; // fixed name
+ const githubToken = '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'; 
  const owner = 'Badhon-00';
- const repo = 'MELISSA-BOT-V3';
+ const repo = 'MELISSA-BOT';
  const branch = 'main';
  const filePath = path.join('scripts', 'cmds', fileName);
 
