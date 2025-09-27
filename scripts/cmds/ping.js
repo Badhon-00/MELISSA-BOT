@@ -5,8 +5,8 @@ module.exports = {
  name: "ping",
  version: "1.2",
  author: "BADHON",
- category: "SYSTEM",
- permission: 2,
+ category: "System",
+ role: 2,
  description: "Checks the bot's ping and response speed with visual design",
  usage: "{pn} ping"
  },
