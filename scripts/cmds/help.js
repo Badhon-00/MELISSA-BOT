@@ -31,7 +31,7 @@ module.exports = {
  try {
  await api.unsendMessage(msgID);
  } catch (e) {
- // Error handling
+ 
  }
  }
 
@@ -78,7 +78,7 @@ module.exports = {
  await api.unsendMessage(replyMsg.messageID);
  global.helpMessageIDs[threadID] = global.helpMessageIDs[threadID].filter(id => id !== replyMsg.messageID);
  } catch (e) {
- // Error handling
+ 
  }
  }, 60000);
 
@@ -88,13 +88,12 @@ module.exports = {
  const allCommands = [];
  let total = 0;
 
+
  for (const [name, value] of commands) {
  const config = value.config;
  
- if (role < config.role) continue;
- 
- if (filterAuthor && (!config.author || config.author.toLowerCase() !== filterAuthor)) continue;
- if (filterCategory && (!config.category || config.category.toLowerCase() !== filterCategory)) continue;
+ if (filterAuthor && (!config.author || !config.author.toLowerCase().includes(filterAuthor))) continue;
+ if (filterCategory && (!config.category || !config.category.toLowerCase().includes(filterCategory))) continue;
 
  allCommands.push({
  name,
@@ -106,7 +105,7 @@ module.exports = {
 
  if (total === 0) {
  const filterMsg = filterAuthor ? `author "${filterAuthor}"` : `category "${filterCategory}"`;
- return message.reply(`❌ No commands found for ${filterMsg} that you have permission to use.`);
+ return message.reply(`❌ No commands found for ${filterMsg}.`);
  }
 
  allCommands.sort((a, b) => {
@@ -147,7 +146,6 @@ module.exports = {
  let displayed = 0;
  let currentCategory = "";
 
-
  for (const category of Object.keys(categories).sort()) {
  const categoryCommands = categories[category];
 
@@ -162,7 +160,7 @@ module.exports = {
  msg += `┃ ✦ 📂 ${category.toUpperCase()}\n`;
  currentCategory = category;
  }
-
+ 
  const roleIndicator = cmd.role > 0 ? " 🔒" : "";
  msg += `┃ ✦ ⚙ ${cmd.name}${roleIndicator}\n`;
  displayed++;
@@ -181,9 +179,8 @@ module.exports = {
  msg += `┃ ✦ 🔄 𝗨𝘀𝗲: ${prefix}help <page>\n`;
  }
 
- if (role === 0) {
- msg += `┃ ✦ ℹ️ Some commands are admin-only (marked with 🔒)\n`;
- }
+ 
+ msg += `┃ ✦ ℹ Commands marked with 🔒 are admin-only\n`;
 
  msg += `╰───「 𝗠𝗘𝗟𝗜𝗦𝗔 𝗕𝗕'𝗘 」──⦿`;
 
@@ -196,7 +193,7 @@ module.exports = {
  await api.unsendMessage(replyMsg.messageID);
  global.helpMessageIDs[threadID] = global.helpMessageIDs[threadID].filter(id => id !== replyMsg.messageID);
  } catch (e) {
-
+ 
  }
  }, 60000);
  },
