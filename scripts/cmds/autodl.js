@@ -7,10 +7,10 @@ module.exports = {
     name: "autodown",
     aliases: ["autodl"],
     version: "1.6.9",
-    author: "Nazrul",
+    author: "BADHON", // don't change author otherwise badhon gives you strike
     role: 0,
     description: "Auto-download media from any  platform",
-    category: "media",
+    category: "downloader",
     guide: { en: "Send any media link" }
   },
 
