@@ -32,7 +32,6 @@ class BankSystem {
     constructor() {
         this.dataFile = path.join(__dirname, 'bankData.json');
         this.initialized = false;
-        this.init();
     }
 
     async init() {
@@ -859,28 +858,45 @@ async function initializeBankModule() {
     }
 }
 
+// onStart function that gets called when the module loads
+function onStart() {
+    console.log('🏦 Bank System Module Starting...');
+    initializeBankModule().then(success => {
+        if (success) {
+            console.log('✅ Bank System Started Successfully!');
+        } else {
+            console.log('❌ Bank System Failed to Start!');
+        }
+    });
+    return true;
+}
+
+// onCall function for handling commands
+async function onCall({ message, args }) {
+    try {
+        const command = args[0]?.toLowerCase() || 'help';
+        const userId = message.senderID;
+        const username = message.senderName || '';
+        const commandArgs = args.slice(1);
+
+        const response = await handleBankCommand(command, userId, commandArgs, username);
+        
+        if (response) {
+            message.reply(response);
+        }
+    } catch (error) {
+        console.error('Bank onCall error:', error);
+        message.reply('❌ An error occurred while processing your bank command. Please try again.');
+    }
+}
+
 // Export for use in other files
 module.exports = {
     config,
-    BankSystem,
+    onStart,
+    onCall,
     handleBankCommand,
     bankSystem,
-    initializeBankModule,
     canUserPlayGames,
     getLoanRestrictionMessage
 };
-
-// Auto-initialize when module is loaded
-initializeBankModule().then(success => {
-    if (success) {
-        console.log('🏦 Bank System Ready!');
-    } else {
-        console.log('💥 Bank System Failed to Initialize!');
-    }
-});
-
-// Example usage when run directly
-if (require.main === module) {
-    console.log('🏦 Bank System Module Loaded');
-    console.log('📝 Available through handleBankCommand(command, userId, args)');
-}
