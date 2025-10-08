@@ -1,4 +1,3 @@
-// commands/Bank.js
 const fs = require('fs');
 const path = require('path');
 
@@ -91,7 +90,7 @@ class BankSystem {
             if (unpaidLoans.length === 0) return false;
 
             const now = new Date();
-            const fiveDaysInMs = 5 * 24 * 60 * 60 * 1000; // 5 days in milliseconds
+            const fiveDaysInMs = 5 * 24 * 60 * 60 * 1000; 
 
             for (const loan of unpaidLoans) {
                 const loanDate = new Date(loan.takenAt);
@@ -143,7 +142,6 @@ class BankSystem {
     canPlayGames(userId) {
         try {
             this.validateUserId(userId);
-            // Allow playing games if loans are not overdue (within 5 days)
             return !this.hasOverdueLoans(userId);
         } catch (error) {
             console.error('Game access check error:', error);
