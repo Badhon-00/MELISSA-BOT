@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const config = {
-    name: "Bank",
+    name: "bank",
     author: "BADHON",
     version: "1.0.0",
     role: "0",
