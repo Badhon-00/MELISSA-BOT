@@ -13,9 +13,8 @@ module.exports = {
   
   onStart: async function ({ api, event, args, message }) {
     try {
-      const forkLink = "https://github.com/Badhon-00/ayanesan-gift.git";
+      const forkLink = "https://github.com/Badhon-00/MELISSA-BOT-V2-GIFT.git";
       
-      // Simple and clean design
       const response = `
 ┌───────────────
 │  AYANE SAN V3
